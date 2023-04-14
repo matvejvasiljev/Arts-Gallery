@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Art Gallery</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,300&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -19,9 +23,9 @@
                 <h4>Paul Nash</h4>
                 <p>Nash received the commission for this work, which was orginally to have been called 'A Flanders
                     Battlefield', from the Ministry of Information in April 1918. It was to feature in a Hall of
-                    Remembrance devoted to ‘fighting subjects, home subjects and the war at sea and in the air’.</p>
+                    Remembrance devoted to fighting subjects, home subjects and the war at sea and in the air.</p>
                 <a href="https://artsandculture.google.com/partner/imperial-war-museums">Museum</a>
-                <a href="#/">More</a>
+                <a href="#/" onclick="openImage(0)">More</a>
             </div>
         </div>
         <div class="painting">
@@ -35,7 +39,7 @@
                     to the city centre, where a church steeple (or town-hall tower) soars into the sky.</p>
                 <a
                     href="https://artsandculture.google.com/partner/kunsthistorisches-museum-vienna-museum-of-fine-arts">Museum</a>
-                <a href="#/">More</a>
+                <a href="#/" onclick="openImage(1)">More</a>
             </div>
         </div>
         <div class="painting">
@@ -49,7 +53,7 @@
                     visited in 1816 and 1817, with the grand manner exemplified by past masters Nicolas Poussin and
                     Joseph Vernet.</p>
                 <a href="https://artsandculture.google.com/partner/the-metropolitan-museum-of-art">Museum</a>
-                <a href="#/">More</a>
+                <a href="#/" onclick="openImage(2)">More</a>
             </div>
         </div>
         <div class="painting">
@@ -63,10 +67,20 @@
                     pilgrim form an anchored rectangle that forms a counterpoised focal point to the receding landscape
                     on the left. </p>
                 <a href="https://artsandculture.google.com/partner/imperial-war-museums">Museum</a>
-                <a href="#/">More</a>
+                <a href="#/" onclick="openImage(3)">More</a>
             </div>
         </div>
     </div>
+    <div class="modal">
+        <a href="#/" id="leftArrow"></a>
+        <img onclick="closeImage()" src="./paintings/2.jpg" alt="">
+        <a href="#/" id="rightArrow"></a>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
+
+<!-- доделать db.js (в итоге 8 картин), открывать правильные картинки -->
+<!-- при нажатии на more делать все картины черно-белыми -->
